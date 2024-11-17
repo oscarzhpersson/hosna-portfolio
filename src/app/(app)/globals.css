@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply w-full h-full;
+  }
+
+  body {
+    @apply m-0 flex justify-center items-center bg-offWhite;
+    font-family: 'SF Pro', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    line-height: 0.9375rem;
+    letter-spacing: -0.03125rem;
+    min-width: 375px;
+  }
+  
+  h1 {
+    @apply text-h1 m-0;
+  }
+
+  p {
+    @apply text-body m-0;
+  }
+
+  a {
+    @apply underline transition-colors duration-200 ease-out;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
