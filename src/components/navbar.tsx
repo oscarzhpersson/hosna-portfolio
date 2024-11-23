@@ -1,8 +1,10 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 export interface NavbarProps {
   logoUrl: string
@@ -15,9 +17,9 @@ export interface NavbarProps {
 }
 
 export function Navbar(props: NavbarProps) {
-  const router = useRouter()
+  const pathname = usePathname()
 
-  const isActive = (href: string) => router.pathname === href
+  const isActive = (href: string) => pathname === href
 
   return (
     <div className="bg-white w-full h-18 max-h-24 p-4 px-12 flex flex-row items-center justify-between drop-shadow-md">
@@ -31,13 +33,10 @@ export function Navbar(props: NavbarProps) {
       <div className="flex flex-row items-center gap-4">
         {props.links.map((link) => (
           <div
+            key={link.href}
             className={`p-2 px-4 flex items-center ${isActive(link.href) ? 'bg-quinary cursor-pointer' : ''} justify-center rounded-lg`}
           >
-            <a
-              key={link.href}
-              href={link.href}
-              className={`no-underline text-black text-sm font-medium`}
-            >
+            <a href={link.href} className={`no-underline text-black text-sm font-medium`}>
               {link.label}
             </a>
           </div>
