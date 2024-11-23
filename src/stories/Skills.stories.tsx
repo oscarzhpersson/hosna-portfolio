@@ -1,14 +1,14 @@
-import { HeroSkills } from '@/components/hero-skills'
+import { Skills } from '@/components/skills'
 import { Meta, StoryFn } from '@storybook/react'
 
-import type { HeroSkillsProps } from '@/components/hero-skills'
+import type { SkillsProps } from '@/components/skills'
 
 export default {
-  title: 'Heroes/HeroSkills',
-  Component: HeroSkills,
+  title: 'Heroes/Skills',
+  Component: Skills,
 } as Meta
 
-const Template: StoryFn<HeroSkillsProps> = (args) => <HeroSkills {...args} />
+const Template: StoryFn<SkillsProps> = (args) => <Skills {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
