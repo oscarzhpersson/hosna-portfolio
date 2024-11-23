@@ -5113,6 +5113,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-icons@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/react-icons@npm:3.0.0"
+  dependencies:
+    react-icons: "npm:*"
+  checksum: 10c0/eb40cbfd1a54bffac54cd56258419fea3cdff62ea71c816bf433662d97cdabb0402df53b499a8096fa847e00a3953679a173d9efdf21bc56f0494b702815ca0e
+  languageName: node
+  linkType: hard
+
 "@types/react-transition-group@npm:^4.4.0":
   version: 4.4.11
   resolution: "@types/react-transition-group@npm:4.4.11"
@@ -11330,6 +11339,7 @@ __metadata:
     "@types/node": "npm:^20.14.9"
     "@types/react": "npm:types-react@19.0.0-rc.0"
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0"
+    "@types/react-icons": "npm:^3.0.0"
     autoprefixer: "npm:^10.4.20"
     babel-plugin-react-compiler: "npm:0.0.0-experimental-48eb8f4-20240822"
     cross-env: "npm:^7.0.3"
@@ -12218,6 +12228,15 @@ __metadata:
   peerDependencies:
     react: ">=16.13.1"
   checksum: 10c0/f977ca61823e43de2381d53dd7aa8b4d79ff6a984c9afdc88dc44f9973b99de7fd382d2f0f91f2688e24bb987c0185bf45d0b004f22afaaab0f990a830253bfb
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:*":
+  version: 5.3.0
+  resolution: "react-icons@npm:5.3.0"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/a53af0de558f0e2bacfbafc973aa8ca1e6a429006a2f83d70becad5be431726a691e096336c95949bb0d967587b145264c5046d2bc1518969dbae731855d0712
   languageName: node
   linkType: hard
 
