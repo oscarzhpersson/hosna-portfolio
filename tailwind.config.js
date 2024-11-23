@@ -3,6 +3,13 @@ export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}', './public/index.html'],
   theme: {
     extend: {
+      screens: {
+        xs: '480px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1440px',
+      },
       keyframes: {
         'fade-in': {
           '0%': { opacity: '0' },
@@ -18,6 +25,9 @@ export default {
         title: ['0.875rem', '1.25rem'],
         subtitle: ['0.75rem', '1.125rem'],
         body: ['0.75rem', '1rem'],
+        '10xl': ['10rem', '1'],
+        '11xl': ['12rem', '1'],
+        '12xl': ['14rem', '1'],
       },
       colors: {
         white: '#ffffff',
