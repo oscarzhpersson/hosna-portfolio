@@ -13,7 +13,7 @@ export interface HeroIntroductionProps {
 export function HeroIntroduction(props: HeroIntroductionProps) {
   return (
     <div className="flex flex-row justify-center items-center h-screen w-screen">
-      <div className="bg-secondary h-screen w-1/2">
+      <div className="bg-secondary h-full w-1/2">
         <div className="flex flex-col gap-4 m-6">
           <FaLinkedin size={48} />
           <FaGithubSquare size={48} />
@@ -27,7 +27,7 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
             <br />
             {props.bottomText}
           </h1>
-          <div className="absolute top-[80%] right-[-80px] w-16 h-16 bg-secondary rounded-full"></div>
+          <div className="absolute animate-bounce top-[80%] right-[-80px] w-16 h-16 bg-secondary rounded-full"></div>
         </div>
       </div>
       <div className="absolute top-[25%] right-[1%] h-full flex items-center">
