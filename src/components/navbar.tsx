@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
 export interface NavbarProps {
@@ -9,6 +10,8 @@ export interface NavbarProps {
     href: string
     label: string
   }[]
+  linkedinUrl?: string
+  githubUrl?: string
 }
 
 export function Navbar(props: NavbarProps) {
@@ -17,24 +20,34 @@ export function Navbar(props: NavbarProps) {
   const isActive = (href: string) => router.pathname === href
 
   return (
-    <div className="bg-white rounded-lg w-full h-18 max-h-24 p-4 px-12 flex flex-row items-center justify-between drop-shadow-2xl">
+    <div className="bg-white w-full h-18 max-h-24 p-4 px-12 flex flex-row items-center justify-between drop-shadow-md">
       <div>
         {props.logoUrl ? (
-          <Image src={props.logoUrl} alt="Logo" width={160} height={160} />
+          <Image src={props.logoUrl} alt="Logo" width={66} height={32} />
         ) : (
           <div className="w-40 h-30 bg-black" />
         )}
       </div>
-      <div className="flex flex-row items-center gap-6">
+      <div className="flex flex-row items-center gap-4">
         {props.links.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className={`mr-4 no-underline ${isActive(link.href) ? 'text-secondary font-medium' : 'text-gray-300 font-normal'}`}
+          <div
+            className={`p-2 px-4 flex items-center ${isActive(link.href) ? 'bg-quinary cursor-pointer' : ''} justify-center rounded-lg`}
           >
-            {link.label}
-          </a>
+            <a
+              key={link.href}
+              href={link.href}
+              className={`no-underline text-black text-sm font-medium`}
+            >
+              {link.label}
+            </a>
+          </div>
         ))}
+        <div className="cursor-pointer">
+          <FaLinkedin size={28} />
+        </div>
+        <div className="cursor-pointer">
+          <FaGithubSquare size={28} />
+        </div>
       </div>
     </div>
   )

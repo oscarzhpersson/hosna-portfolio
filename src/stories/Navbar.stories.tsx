@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/navbar'
 import { Meta, StoryFn } from '@storybook/react'
 
-import Logo from './assets/logo.png'
+import Logo from './assets/logo_simple.png'
 
 import type { NavbarProps } from '@/components/navbar'
 
