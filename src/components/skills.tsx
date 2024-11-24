@@ -16,7 +16,7 @@ const skillBadge = (skill: string) => (
 
 export function Skills(props: SkillsProps) {
   return (
-    <div className="rounded-lg bg-secondary w-3/12 h-[38rem] py-3">
+    <div className="rounded-lg bg-secondary w-4/12 h-[52rem] py-3">
       <div className="flex flex-wrap gap-3 m-6">{props.skills.map(skillBadge)}</div>
     </div>
   )

@@ -27,7 +27,7 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
             <br />
             {props.bottomText}
           </h1>
-          <div className="absolute animate-bounce top-[80%] right-[-80px] w-16 h-16 bg-secondary rounded-full"></div>
+          <div className="absolute animate-bounce top-[80%] right-[-80px] w-16 h-16 bg-secondary rounded-full" />
         </div>
       </div>
       <div className="absolute top-[25%] right-[1%] h-full flex items-center">

@@ -4,7 +4,7 @@ import { Meta, StoryFn } from '@storybook/react'
 import type { SkillsProps } from '@/components/skills'
 
 export default {
-  title: 'Heroes/Skills',
+  title: 'Components/Skills',
   Component: Skills,
 } as Meta
 

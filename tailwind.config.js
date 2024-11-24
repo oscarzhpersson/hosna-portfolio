@@ -38,6 +38,7 @@ export default {
         tertiary: '#3C3D37',
         quartary: '#181C14',
         quinary: '#B4BAB2',
+        senary: '#EBEBEB',
       },
     },
   },
