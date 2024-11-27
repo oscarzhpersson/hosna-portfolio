@@ -4,10 +4,12 @@ import { fetchLogo } from '@/services/cms/fetchLogo'
 import { HeroIntroduction } from '@/components/hero-introduction'
 import { Proficiencies } from '@/components/proficiencies'
 import { Skills } from '@/components/skills'
+import { HeroAbout } from '@/components/hero-about'
+import { fetchProfilePicture } from '@/services/cms/fetchProfilePicture'
 
 const Page = async () => {
-  let logoUrl: string = ''
   let proficiencyTitle = 'I’m a software developer with a passion for web-design'
+  let profilePictureUrl = ''
   let proficiencies = [
     {
       title: 'Web Development',
@@ -49,15 +51,27 @@ const Page = async () => {
     'GraphQL',
     'Docker',
   ]
+  let aboutTitle = 'Meet your new developer!'
+  let aboutDescription =
+    'I am a 21 year old software developer and Computer \
+Science with an interest and skills in Software Development. \
+I am a highly motivated and dedicated individual with a passion \
+for programming. \
+\
+I have a strong foundation in front-end technologies \
+and development, \
+where I am most proficient in web-development. \
+I thrive in fast-paced, collaborative environments and am \
+eager to contribute my skills and expertise to any team.'
 
   try {
-    const [logoUrlResult] = (await Promise.allSettled([fetchLogo()])) as [
+    const [profilePictureUrlResult] = (await Promise.allSettled([fetchProfilePicture()])) as [
       PromiseSettledResult<string>,
     ]
-    if (logoUrlResult.status === 'fulfilled') {
-      logoUrl = logoUrlResult.value
+    if (profilePictureUrlResult.status === 'fulfilled') {
+      profilePictureUrl = profilePictureUrlResult.value
     } else {
-      throw `Error fetching logo URL: ${logoUrlResult.reason}`
+      throw `Error fetching logo URL: ${profilePictureUrlResult.reason}`
     }
   } catch (err) {
     console.error(`Unexpected error: ${err}`)
@@ -74,6 +88,11 @@ const Page = async () => {
         <Proficiencies title={proficiencyTitle} proficiencies={proficiencies} />
         <Skills skills={skills} />
       </div>
+      <HeroAbout
+        title={aboutTitle}
+        description={aboutDescription}
+        profilePictureUrl={profilePictureUrl}
+      />
     </>
   )
 }

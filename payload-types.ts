@@ -24,6 +24,7 @@ export interface Config {
   globals: {
     'site-settings': SiteSetting;
     'seo-properties': SeoProperty;
+    'profile-picture': ProfilePicture;
   };
   locale: null;
   user: User & {
@@ -173,6 +174,16 @@ export interface SiteSetting {
 export interface SeoProperty {
   id: number;
   metaDescription: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "profile-picture".
+ */
+export interface ProfilePicture {
+  id: number;
+  picture: number | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

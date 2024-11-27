@@ -29,8 +29,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = async ({ children }) => 
     <html>
       <body>
         <div className="flex flex-col">
-          <Navbar logoUrl={logoUrl} links={links} />
-          {children}
+          <div className="fixed top-0 left-0 w-full z-50">
+            <Navbar logoUrl={logoUrl} links={links} />
+          </div>
+          <div className="pt-16">{children}</div>
         </div>
       </body>
     </html>

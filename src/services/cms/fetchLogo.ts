@@ -2,7 +2,7 @@ import config from '@payload-config'
 
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 
-import type { Logo } from '@/interfaces/cms/logo'
+import type { imageUrl } from '@/interfaces/cms/image'
 
 /**
  * Fetches the logo URL from the site settings.
@@ -26,7 +26,7 @@ export const fetchLogo = async () => {
       throw new Error('No logo found in site settings')
     }
 
-    const logoUrl = (siteSettings.logo as Logo).url
+    const logoUrl = (siteSettings.logo as imageUrl).url
 
     return logoUrl
   } catch (err) {

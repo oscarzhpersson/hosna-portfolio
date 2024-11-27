@@ -13,6 +13,7 @@ import { Users } from '@/payload-cms/collections/users'
 
 import { SiteSettings } from '@/payload-cms/globals/site-settings'
 import { SeoProperties } from '@/payload-cms/globals/seo-properties'
+import { ProfilePicture } from '@/payload-cms/globals/profile-picture'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,7 +21,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   editor: lexicalEditor(),
   collections: [Media, Pages, Users],
-  globals: [SiteSettings, SeoProperties],
+  globals: [SiteSettings, SeoProperties, ProfilePicture],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
