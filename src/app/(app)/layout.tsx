@@ -20,11 +20,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = async ({ children }) => 
     if (logoUrlResult.status === 'fulfilled') {
       logoUrl = logoUrlResult.value
     } else {
-      throw `Error fetching logo URL: ${logoUrlResult.reason}`
+      throw new Error(`Error fetching logo URL: ${logoUrlResult.reason}`)
     }
   } catch (err) {
     console.error(`Unexpected error: ${err}`)
   }
+
   return (
     <html>
       <body>
