@@ -12,14 +12,14 @@ export interface HeroIntroductionProps {
 
 export function HeroIntroduction(props: HeroIntroductionProps) {
   return (
-    <div className="flex flex-row justify-center items-center h-screen w-screen">
-      <div className="bg-secondary h-full w-1/2">
-        <div className="flex flex-col gap-4 m-6">
+    <div className="flex flex-col lg:flex-row justify-center items-center w-full h-screen bg-black">
+      <div className="bg-secondary h-1/2 w-full lg:h-full lg:w-1/2">
+        <div className="flex flex-col gap-4 m-6 hidden lg:block">
           <FaLinkedin size={48} />
           <FaGithubSquare size={48} />
         </div>
       </div>
-      <div className="bg-primary w-1/2 h-full"></div>
+      <div className="bg-primary h-1/2 w-full lg:h-full lg:w-1/2"></div>
       <div className="absolute inset-0 flex items-center justify-center z-10 text-black text-left">
         <div className="relative">
           <h1 className="text-12xl font-black leading-[0.9]">
@@ -31,7 +31,7 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
         </div>
       </div>
       <div className="absolute top-[25%] right-[1%] h-full flex items-center">
-        <p className="text-secondary rotate-90 origin-right text-base tracking-wider font-semibold">
+        <p className="text-secondary text-center m-12 mt-32 lg:m-0 lg:text-left lg:rotate-90 lg:origin-right text-base tracking-wider font-semibold">
           {props.description}
         </p>
       </div>

@@ -62,13 +62,16 @@ const Page = async () => {
   }
 
   return (
-    <>
+    <div className="h-full w-full">
       <HeroIntroduction
         topText="HE"
         bottomText="LLO"
         description="Front-end developer Student Back-end developer Web developer App developer"
       />
-      <div className="flex flex-row w-full items-center justify-center gap-x-40 my-48">
+      <div
+        className="flex flex-col lg:flex-row w-full items-center justify-center
+                      gap-y-20 lg:gap-y-0 my-20 lg:my-48 lg:space-x-20 lg:px-40"
+      >
         <Proficiencies title={proficiencies.title} proficiencies={proficiencies.proficiencies} />
         <Skills skills={skills} />
       </div>
@@ -77,7 +80,7 @@ const Page = async () => {
         description={about.description}
         profilePictureUrl={profilePictureUrl}
       />
-    </>
+    </div>
   )
 }
 

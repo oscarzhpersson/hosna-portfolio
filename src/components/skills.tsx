@@ -19,7 +19,7 @@ const skillBadge = (skill: Skill, index: number) => (
 
 export function Skills(props: SkillsProps) {
   return (
-    <div className="rounded-lg bg-secondary w-4/12 h-[52rem] py-3">
+    <div className="lg:rounded-lg bg-secondary w-full h-fit lg:w-4/12 lg:h-[52rem] py-12 lg:py-3">
       <div className="flex flex-wrap gap-3 m-6">{props.skills.map(skillBadge)}</div>
     </div>
   )
