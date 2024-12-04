@@ -1,6 +1,6 @@
 import { GlobalConfig } from 'payload'
 
-const Proficiencies: GlobalConfig = {
+export const Proficiencies: GlobalConfig = {
   slug: 'proficiencies',
   label: 'Proficiencies',
   fields: [
@@ -31,5 +31,3 @@ const Proficiencies: GlobalConfig = {
     },
   ],
 }
-
-export default Proficiencies

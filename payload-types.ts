@@ -28,6 +28,7 @@ export interface Config {
     'profile-picture': ProfilePicture;
     about: About;
     proficiencies: Proficiency;
+    projects: Project;
   };
   locale: null;
   user: User & {
@@ -241,6 +242,39 @@ export interface Proficiency {
     | {
         title: string;
         description: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  projects?:
+    | {
+        title: string;
+        description: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        };
+        imageUrl: number | Media;
+        link: string;
+        linkDescription: string;
         id?: string | null;
       }[]
     | null;
