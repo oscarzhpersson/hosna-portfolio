@@ -36,7 +36,7 @@ export function Proficiencies({ title, proficiencies }: ProficienciesProps) {
   const icons = [FaJsSquare, IoPhonePortrait, RiComputerLine]
 
   return (
-    <div className="flex flex-col gap-14 lg:gap-28">
+    <div className="flex flex-col gap-14 px-12 lg:px-0 lg:gap-28">
       <h1 className="text-2xl lg:text-6xl font-medium max-w-md lg:max-w-5xl">{title}</h1>
       <div className="flex flex-col lg:flex-row flex-wrap gap-8">
         {proficiencies.map((proficiency, index) => proficiencyCard(proficiency, index, icons))}

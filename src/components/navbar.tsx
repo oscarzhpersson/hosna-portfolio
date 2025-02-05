@@ -30,7 +30,7 @@ export function Navbar(props: NavbarProps) {
           <div className="w-40 h-30 bg-black" />
         )}
       </div>
-      <div className="flex flex-row items-center gap-4">
+      <div className="hidden lg:flex flex-row items-center gap-4">
         {props.links.map((link) => (
           <div
             key={link.href}
