@@ -22,7 +22,7 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
       <div className="bg-primary h-1/2 w-full lg:h-full lg:w-1/2"></div>
       <div className="absolute inset-0 flex items-center justify-center z-10 text-black text-left">
         <div className="relative">
-          <h1 className="text-12xl font-black leading-[0.9]">
+          <h1 className="text-6xl lg:text-12xl font-black leading-[0.9]">
             {props.topText}
             <br />
             {props.bottomText}
