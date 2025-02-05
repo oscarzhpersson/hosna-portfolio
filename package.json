@@ -28,6 +28,7 @@
     "@payloadcms/next": "3.0.0-beta.108",
     "@payloadcms/richtext-lexical": "3.0.0-beta.108",
     "@payloadcms/richtext-slate": "3.0.0-beta.108",
+    "@payloadcms/storage-vercel-blob": "3.0.0-beta.108",
     "@payloadcms/ui": "3.0.0-beta.108",
     "@types/react-icons": "^3.0.0",
     "babel-plugin-react-compiler": "0.0.0-experimental-48eb8f4-20240822",
