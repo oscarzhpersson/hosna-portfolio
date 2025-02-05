@@ -22,12 +22,12 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
       <div className="bg-primary h-1/2 w-full lg:h-full lg:w-1/2"></div>
       <div className="absolute inset-0 flex items-center justify-center z-10 text-black text-left">
         <div className="relative">
-          <h1 className="text-6xl lg:text-12xl font-black leading-[0.9]">
+          <h1 className="text-8xl lg:text-12xl font-black leading-[0.9]">
             {props.topText}
             <br />
             {props.bottomText}
           </h1>
-          <div className="absolute animate-bounce top-[80%] right-[-80px] w-16 h-16 bg-secondary rounded-full" />
+          <div className="absolute animate-bounce top-[80%] right-[-80px] w-8 h-8 lg:w-16 lg:h-16 bg-secondary rounded-full" />
         </div>
       </div>
       <div className="absolute top-[25%] right-[1%] h-full flex items-center">
