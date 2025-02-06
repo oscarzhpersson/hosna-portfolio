@@ -41,12 +41,22 @@ export function Navbar(props: NavbarProps) {
             </a>
           </div>
         ))}
-        <div className="cursor-pointer">
+        <a
+          href={'https://www.linkedin.com/in/hosnamolavi/'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer hover:opacity-75 transition-opacity z-50"
+        >
           <FaLinkedin size={28} />
-        </div>
-        <div className="cursor-pointer">
+        </a>
+        <a
+          href={'https://github.com/hosnaml'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer hover:opacity-75 transition-opacity z-50"
+        >
           <FaGithubSquare size={28} />
-        </div>
+        </a>
       </div>
     </div>
   )

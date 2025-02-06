@@ -12,11 +12,25 @@ export interface HeroIntroductionProps {
 
 export function HeroIntroduction(props: HeroIntroductionProps) {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center w-full h-screen bg-black">
+    <div className="flex flex-col lg:flex-row justify-center items-center w-full h-screen bg-black z-50">
       <div className="bg-secondary h-1/2 w-full lg:h-full lg:w-1/2">
-        <div className="flex flex-col gap-4 m-6 hidden lg:block">
-          <FaLinkedin size={48} />
-          <FaGithubSquare size={48} />
+        <div className="lg:flex flex-col gap-4 m-6 hidden">
+          <a
+            href={'https://www.linkedin.com/in/hosnamolavi/'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:opacity-75 transition-opacity z-50"
+          >
+            <FaLinkedin size={48} />
+          </a>
+          <a
+            href={'https://github.com/hosnaml'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:opacity-75 transition-opacity z-50"
+          >
+            <FaGithubSquare size={48} />
+          </a>
         </div>
       </div>
       <div className="bg-primary h-1/2 w-full lg:h-full lg:w-1/2"></div>
