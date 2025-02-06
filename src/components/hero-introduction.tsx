@@ -19,7 +19,7 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
             href={'https://www.linkedin.com/in/hosnamolavi/'}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer hover:opacity-75 transition-opacity z-50"
+            className="cursor-pointer hover:opacity-75 transition-opacity z-40"
           >
             <FaLinkedin size={48} />
           </a>
@@ -27,7 +27,7 @@ export function HeroIntroduction(props: HeroIntroductionProps) {
             href={'https://github.com/hosnaml'}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer hover:opacity-75 transition-opacity z-50"
+            className="cursor-pointer hover:opacity-75 transition-opacity z-40"
           >
             <FaGithubSquare size={48} />
           </a>

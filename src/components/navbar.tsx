@@ -22,7 +22,7 @@ export function Navbar(props: NavbarProps) {
   const isActive = (href: string) => pathname === href
 
   return (
-    <div className="bg-white w-full h-18 max-h-24 p-4 px-12 flex flex-row items-center justify-between drop-shadow-md">
+    <div className="bg-white w-full h-18 max-h-24 p-4 px-12 flex flex-row items-center justify-between drop-shadow-md z-50">
       <div>
         {props.logoUrl ? (
           <Image src={props.logoUrl} alt="Logo" width={66} height={32} />
