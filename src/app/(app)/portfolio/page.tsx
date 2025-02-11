@@ -83,7 +83,7 @@ const Page = async () => {
       <HeroIntroduction
         topText="HE"
         bottomText="LLO"
-        description="Front-end developer Student Back-end developer Web developer App developer"
+        description="Front-end developer, Back-end developer, Web developer, App developer"
       />
       <div
         className="flex flex-col lg:flex-row w-full items-center justify-center
