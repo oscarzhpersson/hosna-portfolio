@@ -12,7 +12,7 @@ export interface CardProjectProps {
 const projectCard = (project: ProjectDetails, index: number) => (
   <div
     key={index}
-    className="h-fit flex flex-col lg:flex-row gap-12 mt-12 m-4 lg:mx-20 p-12 bg-secondary rounded-xl shadow-md
+    className="h-fit flex flex-col lg:flex-row gap-12 mt-12 lg:m-4 lg:mx-20 p-12 bg-secondary lg:rounded-xl shadow-md
             border-black border-[0.5px] border-opacity-50 items-center"
   >
     <Image className="rounded-lg" src={project.imageUrl} alt="Project" width={300} height={300} />
@@ -30,7 +30,7 @@ const projectCard = (project: ProjectDetails, index: number) => (
 
 export function CardProject(props: CardProjectProps) {
   return (
-    <div className="w-full flex flex-col p-12 mt-12 lg:mt-20 rounded-xl">
+    <div className="w-full flex flex-col lg:p-12 mt-12 lg:mt-20 rounded-xl">
       {props.projects.map((project, index) => projectCard(project, index))}
     </div>
   )
