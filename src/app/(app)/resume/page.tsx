@@ -10,14 +10,20 @@ const ResumePage = async () => {
   }
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="fixed inset-0 pt-16 pb-0 px-0">
       {pdfUrl ? (
-        <iframe
-          src={pdfUrl}
-          title="Resume PDF"
-          className="w-full h-screen"
-          style={{ border: 'none' }}
-        />
+        <object
+          data={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+          type="application/pdf"
+          className="w-full h-full"
+          style={{
+            display: 'block',
+          }}
+        >
+          <p>
+            Your browser does not support PDFs. <a href={pdfUrl}>Download the PDF</a> instead.
+          </p>
+        </object>
       ) : (
         <p className="text-center p-4">Resume not available</p>
       )}
