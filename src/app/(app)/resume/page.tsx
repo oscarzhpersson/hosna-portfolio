@@ -10,7 +10,7 @@ const ResumePage = async () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="w-full min-h-screen">
       {pdfUrl ? (
         <iframe
           src={pdfUrl}
@@ -19,7 +19,7 @@ const ResumePage = async () => {
           style={{ border: 'none' }}
         />
       ) : (
-        <p>Resume not available</p>
+        <p className="text-center p-4">Resume not available</p>
       )}
     </div>
   )

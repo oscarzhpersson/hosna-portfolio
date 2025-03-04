@@ -29,6 +29,7 @@ export interface Config {
     about: About;
     proficiencies: Proficiency;
     projects: Project;
+    resume: Resume;
   };
   locale: null;
   user: User & {
@@ -278,6 +279,16 @@ export interface Project {
         id?: string | null;
       }[]
     | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "resume".
+ */
+export interface Resume {
+  id: number;
+  pdf: number | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
